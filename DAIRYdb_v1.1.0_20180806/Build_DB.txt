@@ -1,0 +1,16 @@
+# Fasta for Sintax make_udb
+cat DAIRYdb_v1.1_10290_20180806_Final.txt | awk -F"\t" '{print ">"$20"\n"$21}' > DAIRYdb_v1.1_10290_20180806_Final.fasta
+
+# Sintax
+/Bioinformatics/usearch/usearch10 -makeudb_sintax DAIRYdb_v1.1_10290_20180806_Final_STX.fasta -output DAIRYdb_v1.1_10290_20180806_Final_STX.udb
+
+# Metaxa2
+cat DAIRYdb_v1.1_10290_20180806_Final_Bacteria.txt | awk -F"\t" '{print ">"$6""$9" - "$18"\n"$21}' > DAIRYdb_v1.1_10290_20180806_Final_Bacteria.fasta
+cat DAIRYdb_v1.1_10290_20180806_Final_Archaea.txt | awk -F"\t" '{print ">"$6""$9" - "$18"\n"$21}' > DAIRYdb_v1.1_10290_20180806_Final_Archaea.fasta
+cat DAIRYdb_v1.1_10290_20180806_Final.txt | awk -F"\t" '{print ">"$6""$9"\t"$18}' > DAIRYdb_v1.1_10290_20180806_Final_TAX.txt
+
+# run Metaxa2_dbb
+metaxa2_dbb -o SSU_DAIRYdb_v1.1_10290_20180806_Final -g SSU_DAIRYdb_v1.1_10290_20180806_Final -t DAIRYdb_v1.1_10290_20180806_Final_TAX.txt --auto_rep T --cpu 4 --cutoffs 0,75,78.5,82,86.5,94.5,98.65 --save_raw T -a DAIRYdb_v1.1_10290_20180806_Final_Archaea.fasta -b DAIRYdb_v1.1_10290_20180806_Final_Bacteria.fasta --filter_uncultured F --correct_taxonomy F --evaluate F --plus T --divergent T
+
+# run Metaxa2
+metaxa2 -i otus.fa -g SSU_DAIRYdb_v1.1_10290_20180806_Final -o test --cpu 4 --taxonomy T --plus T -T 0,75,78.5,82,86.5,94.5,98.65 -taxlevel 7
