@@ -103,6 +103,8 @@ usearch -sintax otus.fasta -db DAIRYdb_v1.1.2_10290_20180914.udb -tabbedout out.
 Although lowering the sintax_cutoff might lead to an increased number of false positives at lower ranks, the final risk of over-classification is lower due to high quality of the DAIRYdb and the comparison with Metaxa2.
 We suggest to use the Template.taxonomy.xlsx file for final taxonomic classification using the results from both tools. With the DAIRYdb and this approach, about 90% of all OTUs from dairy samples should obtain a confident species annotation.
 
+Alternatively use the python script crossvalid_tax (https://github.com/erifa1/crossvalid_tax.git) for an automated process, which does the same as the Excel file. A cross-check with the Excel file might give you more control over the final annotation.
+
 
 
 

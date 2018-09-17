@@ -13,8 +13,8 @@ cat DAIRYdb_v1.1.2_10290_20180914.txt | awk -F"\t" '{print ">"$20"\n"$21}' > DAI
 /Bioinformatics/usearch/usearch10 -makeudb_sintax DAIRYdb_v1.1.2_10290_20180914_STX.fasta -output DAIRYdb_v1.1.2_10290_20180914_STX.udb
 
 ## run Sintax
-usearch -sintax otus.fasta -db DAIRYdb_v1.1.2_10290_20180914_STX.udb -tabbedout out.sintax -strand both -sintax_cutoff 0.6
-
+/Bioinformatics/usearch/usearch10 -sintax otus.fa -db /Bioinformatics/Databases/DAIRYdb_v1.1.2_10290_20180914_STX.udb -tabbedout out.sintax -strand both -sintax_cutoff 0.6
+ 
 
 # Metaxa2
 ## Prepare Fasta and TAX
