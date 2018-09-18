@@ -1,0 +1,26 @@
+Metaxa Extractor -- Identifies barcoding genes in (meta)genomic data and extracts them
+by Johan Bengtsson-Palme, University of Gothenburg
+Version: 2.2
+-----------------------------------------------------------------
+Tue Sep 18 11:16:41 2018 : Preparing HMM database (should be quick)...
+Tue Sep 18 11:16:41 2018 : Checking and handling input sequence data (should not take long)...
+Tue Sep 18 11:16:41 2018 : Doing paralellised comparison to HMM database (this may take a long while)...
+    Tue Sep 18 11:16:41 2018 : Active PIDs: 88733 88734 
+    Tue Sep 18 11:16:42 2018 : PID 88734 finished.
+    Tue Sep 18 11:16:44 2018 : All processes finished.
+Tue Sep 18 11:16:44 2018 : Parallel HMM-scan finished.
+Tue Sep 18 11:16:44 2018 : Analysing results of HMM-search (this might take quite some time)...
+Tue Sep 18 11:16:44 2018 : Extraction finished!
+Metaxa Extractor -- Identifies barcoding genes in (meta)genomic data and extracts them
+by Johan Bengtsson-Palme, University of Gothenburg
+Version: 2.2
+-----------------------------------------------------------------
+Tue Sep 18 11:24:34 2018 : Preparing HMM database (should be quick)...
+Tue Sep 18 11:24:34 2018 : Checking and handling input sequence data (should not take long)...
+Tue Sep 18 11:24:35 2018 : Doing paralellised comparison to HMM database (this may take a long while)...
+    Tue Sep 18 11:24:35 2018 : Active PIDs: 88998 88999 
+    Tue Sep 18 11:24:38 2018 : PID 88999 finished.
+    Tue Sep 18 11:30:25 2018 : All processes finished.
+Tue Sep 18 11:30:25 2018 : Parallel HMM-scan finished.
+Tue Sep 18 11:30:25 2018 : Analysing results of HMM-search (this might take quite some time)...
+Tue Sep 18 11:30:26 2018 : Extraction finished!
