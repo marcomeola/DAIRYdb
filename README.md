@@ -106,7 +106,8 @@ We suggest to use the Template.taxonomy.xlsx file for final taxonomic classifica
 
 Alternatively use the python script crossvalid_tax (https://github.com/erifa1/crossvalid_tax.git) for an automated process, which does the same as the Excel file. A cross-check with the Excel file might give you more control over the final annotation.
 
-
+## Note
+DAIRYdb is under active development and validation. Please independently confirm the DAIRYdb predictions by manually inspecting the tree and bringing any discrepancies to our attention. 
 
 
 ## Licence
