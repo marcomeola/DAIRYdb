@@ -14,7 +14,7 @@ cat DAIRYdb_v1.1.2_10290_20180914.txt | awk -F"\t" '{print ">"$20"\n"$21}' > DAI
 
 ## run Sintax
 /Bioinformatics/usearch/usearch10 -sintax otus.fa -db /Bioinformatics/Databases/DAIRYdb_v1.1.2_10290_20180914_STX.udb -tabbedout out.sintax -strand both -sintax_cutoff 0.6
- 
+
 
 # Metaxa2
 ## Prepare Fasta and TAX
@@ -27,3 +27,6 @@ metaxa2_dbb -o SSU_DAIRYdb_v1.1.2_10290_20180914_MTX -g SSU_DAIRYdb_v1.1.2_10290
 
 ## run Metaxa2
 metaxa2 -i otus.fa -g SSU_DAIRYdb_v1.1.2_10290_20180914_MTX -o test --cpu 4 --taxonomy T --plus T -T 0,75,78.5,82,86.5,94.5,98.65 -taxlevel 7
+
+# IDTAXA
+cat DAIRYdb_v1.1.2_10290_20180914.txt | awk -F"\t" '{print ">"$18"\n"$21}' > DAIRYdb_v1.1.2_10290_20180914_IDTAXA.fasta

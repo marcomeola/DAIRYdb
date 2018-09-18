@@ -86,6 +86,10 @@ qiime metadata tabulate \
   --o-visualization taxonomy.qzv
 ```
 
+#### IDTAXA
+Open the R file DAIRYdb_v1.1.2_20180914_IDTAXA.R and run the commands or open the workspace with the trained classifier with DAIRYdb DAIRYdb_v1.1.2_20180914_IDTAXA.RData and import your fasta with the otus as described in the R script.
+
+
 ## Usage recommendations for real samples
 
 We recommend to use the taxonomy classification predicted coherently by both, Metaxa2 and SINTAX using the Excel file Taxonomy.template.xlsx. Classification errors should be reduced over selecting only coherent classification at any rank between both tools.
@@ -144,7 +148,10 @@ Camacho, C., Coulouris, G., Avagyan, V., Ma, N., Papadopoulos, J., Bealer, K., M
 Bokulich, N.A., Kaehler, B.D., Rideout, J.R., Dillon, M., Bolyen, E., Knight, R., Huttley, G.A. and Caporaso, J.G.: Optimizing taxonomic classification of marker-gene amplicon sequences with QIIME 2’s q2-feature-classifier plugin. Microbiome, 6(1), 90 (2018). doi:10.1186/s40168-018-0470-z
 
 #### FROGS
-Frédéric Escudié, Lucas Auer, Maria Bernard, Mahendra Mariadassou, Laurent Cauquil, Katia Vidal, Sarah Maman, Guillermina Hernandez-Raquet, Sylvie Combes, Géraldine Pascal; FROGS: Find, Rapidly, OTUs with Galaxy Solution, Bioinformatics, 34(8), 1287–1294 (2018). doi: 10.1093/bioinformatics/btx791
+Escudié, F., Auer, L., Bernard, M., Mariadassou, M., Cauquil, L., Vidal, K., Maman, S., Hernandez-Raquet, G., Combes, S., Pascal, G.: FROGS: Find, Rapidly, OTUs with Galaxy Solution, Bioinformatics, 34(8), 1287–1294 (2018). doi: 10.1093/bioinformatics/btx791
+
+#### IDTAXA
+Murali, A., Bhargava, A., Wright, E. S.: IDTAXA: a novel approach for accurate taxonomic classification of microbiome sequences, Microbiome, 6:140, (2018). doi: 10.1186/s40168-018-0521-5
 
 
 ## Contact
