@@ -14,7 +14,7 @@ DAIRYdb is able to assign sequences to the species rank whereas classical Databa
 DAIRYdb_v1.1.2 is available here as newick tree file and adapted to different classification tools: Metax2.2, Blast+ and SINTAX, Qiime2, FROGS. For request to adapt DAIRYdb to other classifier please do not hesitate drop me a line at marco.meola@agroscope.admin.ch.
 
 #### Sintax (Usearch32bit)
-DAIRYdb_v1.1.2_10290_20180914_STX.udb generated using usearch v10.0. If the available .udb file is not working properly on your system it is recommended to recreate the .udb datbase with your usearch version and OS using following code:
+DAIRYdb_v1.1.2_10290_20180914_STX.udb was generated using usearch v10.0. If the available .udb file is not working properly on your system it is recommended to recreate the .udb datbase with your usearch version and OS using following code:
 ```
 usearch -makeudb_sintax DAIRYdb_v1.1.2_10290_20180914_STX.fasta -output DAIRYdb_v1.1.2_10290_20180914_STX.udb
 ```
@@ -23,7 +23,7 @@ Command to call the taxonomy predictor Sintax
 usearch -sintax otus.fasta -db DAIRYdb_v1.1.2_10290_20180914.udb -tabbedout out.sintax -strand both -sintax_cutoff 0.6
 ```
 #### Metaxa2
-DAIRYdb_v1.1.2_10290_20180914_STX.udb generated using Metaxa2 v2.2. If the available Metaxa2 adapted DAIRYdb SSU_DAIRYdb_v1.1.2_10290_20180914_MTX is not working properly on your system it is recommended to recreate the Metaxa2 datbase with your Metaxa2 version and OS using following code:
+SSU_DAIRYdb_v1.1.2_10290_20180914_MTX was generated using Metaxa2 v2.2. If the available Metaxa2 adapted DAIRYdb SSU_DAIRYdb_v1.1.2_10290_20180914_MTX is not working properly on your system it is recommended to recreate the Metaxa2 datbase with your Metaxa2 version and OS using following code:
 ```
 metaxa2_dbb -o SSU_DAIRYdb_v1.1.2_10290_20180914_MTX -g SSU_DAIRYdb_v1.1.2_10290_20180914_MTX -t DAIRYdb_v1.1.2_10290_20180914_TAX.txt --auto_rep T --cpu 4 --cutoffs 0,75,78.5,82,86.5,94.5,98.65 --save_raw T -a DAIRYdb_v1.1.2_10290_20180914_Archaea.fasta -b DAIRYdb_v1.1.2_10290_20180914_Bacteria.fasta --filter_uncultured F --correct_taxonomy F --evaluate F --plus T --divergent T
 ```
@@ -32,6 +32,7 @@ Unpack the tarball with
 tar -xvfz SSU_DAIRYdb_v1.1.2_10290_20180914_MTX.tar.gz
 ```
 and copy the unpacked folder into the folder metaxa2_db (usually located at /usr/local/bin/metaxa2_db)
+or follow the instructions on http://microbiology.se/2018/09/13/dairydb-added-to-metaxa2/
 
 Command to call the taxonomy predictor Metaxa2.2 using the DAIRYdb
 ```
