@@ -40,7 +40,7 @@ trainingSet
 trainingSet2 <- LearnTaxa(dna,
           taxonomy,
           rank = NULL,
-          K = floor(log(100*quantile(width(train), 0.99), 4)),
+          K = floor(log(100*quantile(width(dna), 0.99), 4)),
           minFraction = 0.01,
           maxFraction = 0.06,
           maxIterations = 10,
@@ -50,6 +50,13 @@ trainingSet2 <- LearnTaxa(dna,
 
 # view information about the classifier
 plot(trainingSet)
+plot(trainingSet2)
+
+trainingSet$problemGroups
+trainingSet$problemSequences
+
+trainingSet2$problemGroups
+trainingSet2$problemSequences
 
 # Analysis
 
