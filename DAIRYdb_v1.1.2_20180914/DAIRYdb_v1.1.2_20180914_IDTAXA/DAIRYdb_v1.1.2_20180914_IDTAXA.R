@@ -17,7 +17,7 @@ m <- matrix(rnorm(9), 3, 3)
 foreach(i=1:nrow(m), .combine=rbind)
 
 # Import database
-setwd("~/DAIRYdb/DAIRYdb_v1.1.2_20180914/DAIRYdb_v1.1.2_20180914_IDTAXA/DAIRYdb_v1.1.2")
+setwd("~path/to/Database")
 # import training sequences
 dna <- readDNAStringSet("DAIRYdb_v1.1.2_10290_20180914_IDTAXA.fasta")
 
