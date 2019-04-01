@@ -1,0 +1,15 @@
+Metaxa2_x run started at Fri Feb 22 16:44:25 2019.
+-----------------------------------------------------------------
+Number of sequences in input file:       	10282
+Sequences detected as SSU rRNA by Metaxa:	10282
+  On main strand:         	10282
+  On complementary strand:	0
+SSU rRNA sequences by preliminary origin:
+  Archaea:     	0
+  Bacteria:    	10282
+  Eukaryota:   	0
+  Chloroplast: 	0
+  Mitochondria:	0
+  Other:       	0
+-----------------------------------------------------------------
+metaxa2_x run finished at Fri Feb 22 17:02:54 2019.

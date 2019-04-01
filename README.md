@@ -5,47 +5,47 @@ Marco Meola, Etienne Rifa, Noam Shani, Céline Delbes, Hélène Berthoud, Christ
 bioRxiv 386151; doi: https://doi.org/10.1101/386151
 
 ## Description
-DAIRYdb provides 10'290 complete sequences of 16S ribosomal RNA (V1-V9) from bacterial species of dairy products. The taxonomy has been automatically and manually curated on the 7 ranks.
+DAIRYdb provides 10'389 sequences of full-length 16S ribosomal RNA (V1-V9) from microbial species (10'282 bacteria, 107 archaea) of dairy products. The taxonomy has been automatically and manually curated on the 7 ranks.
 DAIRYdb is able to assign sequences to the species rank whereas classical Databases are less accurate.
 
 
 ## Installation
 ### Download DAIRYdb
-DAIRYdb_v1.1.2 is available here as newick tree file and adapted to different classification tools: Metax2.2, Blast+ and SINTAX, Qiime2, FROGS. For request to adapt DAIRYdb to other classifier please do not hesitate drop me a line at marco.meola@agroscope.admin.ch.
+DAIRYdb_v1.2.0 is available here as newick tree file and adapted to different classification tools: Metax2.2, Blast+ and SINTAX, Qiime2, FROGS. For request to adapt DAIRYdb to other classifier please do not hesitate drop me a line at marco.meola@agroscope.admin.ch.
 
 #### Sintax (Usearch32bit)
-DAIRYdb_v1.1.2_10290_20180914_STX.udb was generated using usearch v10.0. If the available .udb file is not working properly on your system it is recommended to recreate the .udb datbase with your usearch version and OS using following code:
+DAIRYdb_v1.2.0_20100222_STX.udb was generated using usearch v10.0. If the available .udb file is not working properly on your system it is recommended to recreate the .udb datbase with your usearch version and OS using following code:
 ```
-usearch -makeudb_sintax DAIRYdb_v1.1.2_10290_20180914_STX.fasta -output DAIRYdb_v1.1.2_10290_20180914_STX.udb
+usearch -makeudb_sintax DAIRYdb_v1.2.0_20100222_STX.fasta -output DAIRYdb_v1.2.0_20100222_STX.udb
 ```
 Command to call the taxonomy predictor Sintax
 ```
-usearch -sintax otus.fasta -db DAIRYdb_v1.1.2_10290_20180914.udb -tabbedout out.sintax -strand both -sintax_cutoff 0.6
+usearch -sintax otus.fasta -db DAIRYdb_v1.2.0_20100222.udb -tabbedout out.sintax -strand both -sintax_cutoff 0.6
 ```
 #### Metaxa2
-SSU_DAIRYdb_v1.1.2_10290_20180914_MTX was generated using Metaxa2 v2.2. If the available Metaxa2 adapted DAIRYdb SSU_DAIRYdb_v1.1.2_10290_20180914_MTX is not working properly on your system it is recommended to recreate the Metaxa2 datbase with your Metaxa2 version and OS using following code:
+SSU_DAIRYdb_v1.2.0_20100222_MTX was generated using Metaxa2 v2.2. If the available Metaxa2 adapted DAIRYdb SSU_DAIRYdb_v1.2.0_20100222_MTX is not working properly on your system it is recommended to recreate the Metaxa2 datbase with your Metaxa2 version and OS using following code:
 ```
-metaxa2_dbb -o SSU_DAIRYdb_v1.1.2_10290_20180914_MTX -g SSU_DAIRYdb_v1.1.2_10290_20180914_MTX -t DAIRYdb_v1.1.2_10290_20180914_TAX.txt --auto_rep T --cpu 4 --cutoffs 0,75,78.5,82,86.5,94.5,98.65 --save_raw T -a DAIRYdb_v1.1.2_10290_20180914_Archaea.fasta -b DAIRYdb_v1.1.2_10290_20180914_Bacteria.fasta --filter_uncultured F --correct_taxonomy F --evaluate F --plus T --divergent T
+metaxa2_dbb -o SSU_DAIRYdb_v1.2.0_20100222_MTX -g SSU_DAIRYdb_v1.2.0_20100222_MTX -t DAIRYdb_v1.2.0_20100222_TAX.txt --auto_rep T --cpu 4 --cutoffs 0,75,78.5,82,86.5,94.5,98.65 --save_raw T -a DAIRYdb_v1.2.0_20100222_Archaea.fasta -b DAIRYdb_v1.2.0_20100222_Bacteria.fasta --filter_uncultured F --correct_taxonomy F --evaluate F --plus T --divergent T
 ```
 Unpack the tarball with
 ```
-tar -xvfz SSU_DAIRYdb_v1.1.2_10290_20180914_MTX.tar.gz
+tar -xvfz SSU_DAIRYdb_v1.2.0_20100222_MTX.tar.gz
 ```
-and copy the unpacked folder into the folder metaxa2_db (usually located at /usr/local/bin/metaxa2_db)
+and copy the unpacked folder into th20100222e folder metaxa2_db (usually located at /usr/local/bin/metaxa2_db)
 or follow the instructions on http://microbiology.se/2018/09/13/dairydb-added-to-metaxa2/
 
 Command to call the taxonomy predictor Metaxa2.2 using the DAIRYdb
 ```
-metaxa2 -i otus.fasta -g SSU_DAIRYdb_v1.1.2_10290_20180914_MTX -o test --cpu 4 --taxonomy T --plus T -T 0,75,78.5,82,86.5,94.5,98.65 -taxlevel 7 -d blast -t b,a
+metaxa2 -i otus.fasta -g SSU_DAIRYdb_v1.2.0_20100222_MTX -o test --cpu 4 --taxonomy T --plus T -T 0,75,78.5,82,86.5,94.5,98.65 -taxlevel 7 -d blast -t b,a
 ```
 #### Blast+
 Database generated using Blast+
 ```
-makeblastdb -in DAIRYdb_v1.1.2_10290_20180914_blast.fasta -dbtype nucl
+makeblastdb -in DAIRYdb_v1.2.0_20100222_blast.fasta -dbtype nucl
 ```
 Command to call the taxonomy predictor Blast+
 ```
-blastn -query otus.fasta -db DAIRYdb_v1.1.2_10290_20180914_blast.fasta -num_threads 5 -out OUT_tax.txt -evalue 1 -outfmt 6 -perc_identity 97 -max_target_seqs 50
+blastn -query otus.fasta -db DAIRYdb_v1.2.0_20100222_blast.fasta -num_threads 5 -out OUT_tax.txt -evalue 1 -outfmt 6 -perc_identity 97 -max_target_seqs 50
 ```
 #### Qiime2
 Database generated using Qiime2 classifier train
@@ -55,8 +55,8 @@ For more explanation check qiime2 tutorial (https://docs.qiime2.org/2018.6/tutor
 ```
 qiime tools import \
   --type 'FeatureData[Sequence]' \
-  --input-path DAIRYdb_v1.1.2_ok.fasta \
-  --output-path DAIRYdb_v1.1.2_ok.qza
+  --input-path DAIRYdb_v1.2.0_ok.fasta \
+  --output-path DAIRYdb_v1.2.0_ok.qza
 
 
 qiime tools import \
@@ -69,15 +69,15 @@ qiime tools import \
 ##### Train the classifier
 ```
 qiime feature-classifier fit-classifier-naive-bayes \
-  --i-reference-reads DAIRYdb_v1.1.2_.qza \
+  --i-reference-reads DAIRYdb_v1.2.0_.qza \
   --i-reference-taxonomy ref-taxonomy.qza \
-  --o-classifier DAIRYdb_v1.1.2_10290_20180914_qiime2_classifier.qza
+  --o-classifier DAIRYdb_v1.2.0_20100222_qiime2_classifier.qza
 ```
 
 ##### Test the classifier
 ```
 qiime feature-classifier classify-sklearn \
-  --i-classifier DAIRYdb_v1.1.2_10290_20180914_qiime2_classifier.qza \
+  --i-classifier DAIRYdb_v1.2.0_20100222_qiime2_classifier.qza \
   --i-reads rep-seqs.qza \
   --o-classification taxonomy.qza
 
@@ -87,7 +87,7 @@ qiime metadata tabulate \
 ```
 
 #### IDTAXA
-Open the R file DAIRYdb_v1.1.2_20180914_IDTAXA.R and run the commands or open the workspace with the trained classifier with DAIRYdb DAIRYdb_v1.1.2_20180914_IDTAXA.RData and import your fasta with the otus as described in the R script.
+Open the R file DAIRYdb_v1.2.0_20100222_IDTAXA.R and run the commands or open the workspace with the trained classifier with DAIRYdb DAIRYdb_v1.2.0_20100222_IDTAXA.RData and import your fasta with the otus as described in the R script.
 
 
 ## Usage recommendations for real samples
@@ -98,12 +98,12 @@ We recommend to use the taxonomy classification predicted coherently by both, Me
 
 Metaxa2 performance is highly influenced by the values given for classification in -T
 ```
-metaxa2 -i otus.fasta -g DAIRYdb_v1.1.2_20180515_Metaxa2.2 -o out_metaxa2 --cpu 4 --taxonomy T --plus T -T 0,75,78.5,82,86.5,94.5,98.65 -taxlevel 7
+metaxa2 -i otus.fasta -g DAIRYdb_v1.2.0_20180515_Metaxa2.2 -o out_metaxa2 --cpu 4 --taxonomy T --plus T -T 0,75,78.5,82,86.5,94.5,98.65 -taxlevel 7
 ```
 
 2) Classify your OTUs with SINTAX
 ```
-usearch -sintax otus.fasta -db DAIRYdb_v1.1.2_10290_20180914.udb -tabbedout out.sintax -strand both -sintax_cutoff 0.6
+usearch -sintax otus.fasta -db DAIRYdb_v1.2.0_20100222.udb -tabbedout out.sintax -strand both -sintax_cutoff 0.6
 ```
 Although lowering the sintax_cutoff might lead to an increased number of false positives at lower ranks, the final risk of over-classification is lower due to high quality of the DAIRYdb and the comparison with Metaxa2.
 We suggest to use the Template.taxonomy.xlsx file for final taxonomic classification using the results from both tools. With the DAIRYdb and this approach, about 90% of all OTUs from dairy samples should obtain a confident species annotation.
@@ -119,7 +119,7 @@ Moreover, please let us know if you want DAIRYdb to be adapted to a specific cla
  <img src="https://raw.githubusercontent.com/marcomeola/DAIRYdb/master/images/etalab.png" width="50"> [ETALAB](https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf)
 GPL 3.0
 ## Copyright
-2018 Agroscope, INRA
+2019 Agroscope, INRA
 
 ## Disclaimer
 DAIRYdb is released under the ETALAB and GPL 3.0 licenses. The software is therefore open-source and free to use, as long as any modification to the source code will be exclusively for your sole purpose, or released within the terms of the license. Any commercial sale (standalone or as part of a package) is forbidden. DAIRYdb is made available to the community is delivered without any warranty, as expressed by the terms of this disclaimer. It is implied that you agree with the terms of the license and the disclaimer, if you decide to use the DAIRYdb.
