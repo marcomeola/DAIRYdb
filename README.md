@@ -1,7 +1,7 @@
 <img src="https://raw.githubusercontent.com/marcomeola/DAIRYdb/master/images/logo_ddb2.png" width="200">
 
 # DAIRYdb: a manually curated reference database for improved taxonomy annotation of 16S rRNA gene sequences from dairy products
-Marco Meola, Etienne Rifa, Noam Shani, Céline Delbes, Hélène Berthoud, Christophe Chassard (2019). BMC Genomics 20(1):560. https://doi.org/10.1186/s12864-019-5914-8
+Marco Meola, Etienne Rifa, Noam Shani, Céline Delbes, Hélène Berthoud, Christophe Chassard. (2019) BMC Genomics 20(1):560. https://doi.org/10.1186/s12864-019-5914-8
 
 ## Description
 DAIRYdb provides 10'389 sequences of full-length 16S ribosomal RNA (V1-V9) from microbial species (10'282 bacteria, 107 archaea) of dairy products. The taxonomy has been automatically and manually curated on the 7 ranks.
