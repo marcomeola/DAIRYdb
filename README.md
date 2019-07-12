@@ -97,7 +97,7 @@ We recommend to use the taxonomy classification predicted coherently by both, Me
 
 Metaxa2 performance is highly influenced by the values given for classification in -T
 ```
-metaxa2 -i otus.fasta -g DAIRYdb_v1.2.0_20180515_Metaxa2.2 -o out_metaxa2 --cpu 4 --taxonomy T --plus T -T 0,75,78.5,82,86.5,94.5,98.65 -taxlevel 7
+metaxa2 -i otus.fasta -g DAIRYdb_v1.2.0_20190222_MTX -o out_metaxa2 --cpu 4 --taxonomy T --plus T -T 0,75,78.5,82,86.5,94.5,98.65 -taxlevel 7
 ```
 
 2) Classify your OTUs with SINTAX
