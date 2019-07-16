@@ -88,6 +88,10 @@ qiime metadata tabulate \
 #### IDTAXA
 Open the R file DAIRYdb_v1.2.0_20190222_IDTAXA.R and run the commands or open the workspace with the trained classifier with DAIRYdb DAIRYdb_v1.2.0_20190222_IDTAXA.RData and import your fasta with the otus as described in the R script.
 
+#### mothur
+```
+mothur "#classify.seqs(fasta=OTUS.fasta, template=DAIRYdb_v1.2.0_20190222_mothur.fasta , taxonomy=DAIRYdb_v1.2.0_20190222_mothur.tax)"
+```
 
 ## Usage recommendations for real samples
 
@@ -127,7 +131,7 @@ DAIRYdb is released under the ETALAB and GPL 3.0 licenses. The software is there
 ## Citation
 If you use the DAIRYdb, please cite:
 
-Marco Meola, Etienne Rifa, Noam Shani, Céline Delbes, Hélène Berthoud, Christophe Chassard; DAIRYdb: A manually curated gold standard reference database for improved taxonomy annotation of 16S rRNA gene sequences from dairy products
+Marco Meola, Etienne Rifa, Noam Shani, Céline Delbes, Hélène Berthoud, Christophe Chassard. (2019) BMC Genomics 20(1):560. https://doi.org/10.1186/s12864-019-5914-8
 
 ## References
 If you use the DAIRYdb implemented with one of the mentioned classification tools, please cite accordingly:
