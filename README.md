@@ -94,10 +94,10 @@ mothur "#classify.seqs(fasta=OTUS.fasta, template=DAIRYdb_v1.2.0_20190222_mothur
 ```
 
 #### Kraken2
-This version was added upon request although Kraken2 was developed for shotgun squencing. We have no test or validation run with Kraken2 and the usage of DAIRYdb with Kraken2 goes without warranty.
+This version was added upon request although Kraken2 was developed for shotgun sequencing. We have no test or validation run with Kraken2 and the usage of DAIRYdb with Kraken2 goes without warranty.
 
 ```
-/opt/kraken2/kraken2 --db ../ddb_kraken testV3V4.fasta --use-names > res_ddb.csv
+kraken2 --db path_to/DAIRYdb_v1.2.0_20190222_kraken2 OTUS.fasta --use-names --report res.report > res.csv
 ```
 
 ## Usage recommendations for real samples
