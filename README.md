@@ -93,6 +93,13 @@ Open the R file DAIRYdb_v1.2.0_20190222_IDTAXA.R and run the commands or open th
 mothur "#classify.seqs(fasta=OTUS.fasta, template=DAIRYdb_v1.2.0_20190222_mothur.fasta , taxonomy=DAIRYdb_v1.2.0_20190222_mothur.tax)"
 ```
 
+#### Kraken2
+This version was added upon request although Kraken2 was developed for shotgun squencing. We have no test or validation run with Kraken2 and the usage of DAIRYdb with Kraken2 goes without warranty.
+
+```
+/opt/kraken2/kraken2 --db ../ddb_kraken testV3V4.fasta --use-names > res_ddb.csv
+```
+
 ## Usage recommendations for real samples
 
 We recommend to use the taxonomy classification predicted coherently by both, Metaxa2 and SINTAX using the Excel file Taxonomy.template.xlsx. Classification errors should be reduced over selecting only coherent classification at any rank between both tools.
@@ -155,6 +162,9 @@ Escudié, F., Auer, L., Bernard, M., Mariadassou, M., Cauquil, L., Vidal, K., Ma
 
 #### IDTAXA
 Murali, A., Bhargava, A., Wright, E. S.: IDTAXA: a novel approach for accurate taxonomic classification of microbiome sequences, Microbiome, 6:140, (2018). doi: 10.1186/s40168-018-0521-5
+
+#### Kraken2
+Wood, D.E., Lu, J. & Langmead, B. Improved metagenomic analysis with Kraken 2. Genome Biol 20, 257 (2019). doi: 10.1186/s13059-019-1891-0
 
 
 ## Contact
