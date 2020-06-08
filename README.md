@@ -10,41 +10,41 @@ DAIRYdb is able to assign sequences to the species rank whereas classical Databa
 
 ## Installation
 ### Download DAIRYdb
-DAIRYdb_v1.2.0 is available here as newick tree file and adapted to different classification tools: Metax2.2, Blast+ and SINTAX, Qiime2, FROGS. For request to adapt DAIRYdb to other classifier please do not hesitate drop me a line at marco.meola@agroscope.admin.ch.
+DAIRYdb_v1.2.4 is available here as newick tree file and adapted to different classification tools: Metax2.2, Blast+ and SINTAX, Qiime2, FROGS. For request to adapt DAIRYdb to other classifier please do not hesitate drop me a line at marco.meola@agroscope.admin.ch.
 
 #### Sintax (Usearch32bit)
-DAIRYdb_v1.2.0_20190222_STX.udb was generated using usearch v10.0. If the available .udb file is not working properly on your system it is recommended to recreate the .udb datbase with your usearch version and OS using following code:
+DAIRYdb_v1.2.4_20200604_STX.udb was generated using usearch v10.0. If the available .udb file is not working properly on your system it is recommended to recreate the .udb datbase with your usearch version and OS using following code:
 ```
-usearch -makeudb_sintax DAIRYdb_v1.2.0_20190222_STX.fasta -output DAIRYdb_v1.2.0_20190222_STX.udb
+usearch -makeudb_sintax DAIRYdb_v1.2.4_20200604_STX.fasta -output DAIRYdb_v1.2.4_20200604_STX.udb
 ```
 Command to call the taxonomy predictor Sintax
 ```
-usearch -sintax otus.fasta -db DAIRYdb_v1.2.0_20190222.udb -tabbedout out.sintax -strand both -sintax_cutoff 0.6
+usearch -sintax otus.fasta -db DAIRYdb_v1.2.4_20200604.udb -tabbedout out.sintax -strand both -sintax_cutoff 0.6
 ```
 #### Metaxa2
-SSU_DAIRYdb_v1.2.0_20190222_MTX was generated using Metaxa2 v2.2. If the available Metaxa2 adapted DAIRYdb SSU_DAIRYdb_v1.2.0_20190222_MTX is not working properly on your system it is recommended to recreate the Metaxa2 datbase with your Metaxa2 version and OS using following code:
+SSU_DAIRYdb_v1.2.4_20200604_MTX was generated using Metaxa2 v2.2. If the available Metaxa2 adapted DAIRYdb SSU_DAIRYdb_v1.2.4_20200604_MTX is not working properly on your system it is recommended to recreate the Metaxa2 datbase with your Metaxa2 version and OS using following code:
 ```
-metaxa2_dbb -o SSU_DAIRYdb_v1.2.0_20190222_MTX -g SSU_DAIRYdb_v1.2.0_20190222_MTX -t DAIRYdb_v1.2.0_20190222_TAX.txt --auto_rep T --cpu 4 --cutoffs 0,75,78.5,82,86.5,94.5,98.65 --save_raw T -a DAIRYdb_v1.2.0_20190222_Archaea.fasta -b DAIRYdb_v1.2.0_20190222_Bacteria.fasta --filter_uncultured F --correct_taxonomy F --evaluate F --plus T --divergent T
+metaxa2_dbb -o SSU_DAIRYdb_v1.2.4_20200604_MTX -g SSU_DAIRYdb_v1.2.4_20200604_MTX -t DAIRYdb_v1.2.4_20200604_TAX.txt --auto_rep T --cpu 4 --cutoffs 0,75,78.5,82,86.5,94.5,98.65 --save_raw T -a DAIRYdb_v1.2.4_20200604_Archaea.fasta -b DAIRYdb_v1.2.4_20200604_Bacteria.fasta --filter_uncultured F --correct_taxonomy F --evaluate F --plus T --divergent T
 ```
 Unpack the tarball with
 ```
-tar -xvfz SSU_DAIRYdb_v1.2.0_20190222_MTX.tar.gz
+tar -xvfz SSU_DAIRYdb_v1.2.4_20200604_MTX.tar.gz
 ```
 and copy the unpacked folder into the folder metaxa2_db (usually located at /usr/local/bin/metaxa2_db)
 or follow the instructions on http://microbiology.se/2018/09/13/dairydb-added-to-metaxa2/
 
 Command to call the taxonomy predictor Metaxa2.2 using the DAIRYdb
 ```
-metaxa2 -i otus.fasta -g SSU_DAIRYdb_v1.2.0_20190222_MTX -o test --cpu 4 --taxonomy T --plus T -T 0,75,78.5,82,86.5,94.5,98.65 -taxlevel 7 -d blast -t b,a
+metaxa2 -i otus.fasta -g SSU_DAIRYdb_v1.2.4_20200604_MTX -o test --cpu 4 --taxonomy T --plus T -T 0,75,78.5,82,86.5,94.5,98.65 -taxlevel 7 -d blast -t b,a
 ```
 #### Blast+
 Database generated using Blast+
 ```
-makeblastdb -in DAIRYdb_v1.2.0_20190222_blast.fasta -dbtype nucl
+makeblastdb -in DAIRYdb_v1.2.4_20200604_blast.fasta -dbtype nucl
 ```
 Command to call the taxonomy predictor Blast+
 ```
-blastn -query otus.fasta -db DAIRYdb_v1.2.0_20190222_blast.fasta -num_threads 5 -out OUT_tax.txt -evalue 1 -outfmt 6 -perc_identity 97 -max_target_seqs 50
+blastn -query otus.fasta -db DAIRYdb_v1.2.4_20200604_blast.fasta -num_threads 5 -out OUT_tax.txt -evalue 1 -outfmt 6 -perc_identity 97 -max_target_seqs 50
 ```
 #### Qiime2
 Database generated using Qiime2 classifier train
@@ -54,8 +54,8 @@ For more explanation check qiime2 tutorial (https://docs.qiime2.org/2018.6/tutor
 ```
 qiime tools import \
   --type 'FeatureData[Sequence]' \
-  --input-path DAIRYdb_v1.2.0_ok.fasta \
-  --output-path DAIRYdb_v1.2.0_ok.qza
+  --input-path DAIRYdb_v1.2.4_ok.fasta \
+  --output-path DAIRYdb_v1.2.4_ok.qza
 
 
 qiime tools import \
@@ -68,15 +68,15 @@ qiime tools import \
 ##### Train the classifier
 ```
 qiime feature-classifier fit-classifier-naive-bayes \
-  --i-reference-reads DAIRYdb_v1.2.0_.qza \
+  --i-reference-reads DAIRYdb_v1.2.4_.qza \
   --i-reference-taxonomy ref-taxonomy.qza \
-  --o-classifier DAIRYdb_v1.2.0_20190222_qiime2_classifier.qza
+  --o-classifier DAIRYdb_v1.2.4_20200604_qiime2_classifier.qza
 ```
 
 ##### Test the classifier
 ```
 qiime feature-classifier classify-sklearn \
-  --i-classifier DAIRYdb_v1.2.0_20190222_qiime2_classifier.qza \
+  --i-classifier DAIRYdb_v1.2.4_20200604_qiime2_classifier.qza \
   --i-reads rep-seqs.qza \
   --o-classification taxonomy.qza
 
@@ -86,18 +86,18 @@ qiime metadata tabulate \
 ```
 
 #### IDTAXA
-Open the R file DAIRYdb_v1.2.0_20190222_IDTAXA.R and run the commands or open the workspace with the trained classifier with DAIRYdb DAIRYdb_v1.2.0_20190222_IDTAXA.RData and import your fasta with the otus as described in the R script.
+Open the R file DAIRYdb_v1.2.4_20200604_IDTAXA.R and run the commands or open the workspace with the trained classifier with DAIRYdb DAIRYdb_v1.2.4_20200604_IDTAXA.RData and import your fasta with the otus as described in the R script.
 
 #### mothur
 ```
-mothur "#classify.seqs(fasta=OTUS.fasta, template=DAIRYdb_v1.2.0_20190222_mothur.fasta , taxonomy=DAIRYdb_v1.2.0_20190222_mothur.tax)"
+mothur "#classify.seqs(fasta=OTUS.fasta, template=DAIRYdb_v1.2.4_20200604_mothur.fasta , taxonomy=DAIRYdb_v1.2.4_20200604_mothur.tax)"
 ```
 
 #### Kraken2
 This version was added upon request although Kraken2 was developed for shotgun sequencing. We have no test or validation run with Kraken2 and the usage of DAIRYdb with Kraken2 goes without warranty.
 
 ```
-kraken2 --db path_to/DAIRYdb_v1.2.0_20190222_kraken2 OTUS.fasta --use-names --report res.report > res.csv
+kraken2 --db path_to/DAIRYdb_v1.2.4_20200604_kraken2 OTUS.fasta --use-names --report res.report > res.csv
 ```
 
 ## Usage recommendations for real samples
@@ -108,12 +108,12 @@ We recommend to use the taxonomy classification predicted coherently by both, Me
 
 Metaxa2 performance is highly influenced by the values given for classification in -T
 ```
-metaxa2 -i otus.fasta -g DAIRYdb_v1.2.0_20190222_MTX -o out_metaxa2 --cpu 4 --taxonomy T --plus T -T 0,75,78.5,82,86.5,94.5,98.65 -taxlevel 7
+metaxa2 -i otus.fasta -g DAIRYdb_v1.2.4_20200604_MTX -o out_metaxa2 --cpu 4 --taxonomy T --plus T -T 0,75,78.5,82,86.5,94.5,98.65 -taxlevel 7
 ```
 
 2) Classify your OTUs with SINTAX
 ```
-usearch -sintax otus.fasta -db DAIRYdb_v1.2.0_20190222.udb -tabbedout out.sintax -strand both -sintax_cutoff 0.6
+usearch -sintax otus.fasta -db DAIRYdb_v1.2.4_20200604.udb -tabbedout out.sintax -strand both -sintax_cutoff 0.6
 ```
 Although lowering the sintax_cutoff might lead to an increased number of false positives at lower ranks, the final risk of over-classification is lower due to high quality of the DAIRYdb and the comparison with Metaxa2.
 We suggest to use the Template.taxonomy.xlsx file for final taxonomic classification using the results from both tools. With the DAIRYdb and this approach, about 90% of all OTUs from dairy samples should obtain a confident species annotation.
