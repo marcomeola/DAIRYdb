@@ -167,5 +167,9 @@ Murali, A., Bhargava, A., Wright, E. S.: IDTAXA: a novel approach for accurate t
 Wood, D.E., Lu, J. & Langmead, B. Improved metagenomic analysis with Kraken 2. Genome Biol 20, 257 (2019). doi: 10.1186/s13059-019-1891-0
 
 
+## Archive
+
+Previous versions of the DAIRYdb are available at [this link.](https://frama.link/dairydb_archive)
+
 ## Contact
 marco.meola@agroscope.admin.ch

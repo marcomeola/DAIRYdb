@@ -1,8 +1,0 @@
-A1	A1	start
-A2	A2	end
-B1	B1	start
-B2	B2	end
-A1	A1	start
-A2	A2	end
-B1	B1	start
-B2	B2	end
