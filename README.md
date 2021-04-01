@@ -1,5 +1,7 @@
 <img src="https://raw.githubusercontent.com/marcomeola/DAIRYdb/master/images/logo_ddb2.png" width="200">
 
+------>IMPORTANT!!!! Latest versions of the DAIRYdb v1.2.5 (with the old nomenclature)  and the v.2.0.0 (containig the same sequences as 1.2.5 but with the new nomenaclature for Lactic acid bacteria (see check_tax_fun.log) are deposited here: https://nextcloud.inrae.fr/s/5ne3ooAsM7zQtcW)
+
 # DAIRYdb: a manually curated reference database for improved taxonomy annotation of 16S rRNA gene sequences from dairy products
 Marco Meola, Etienne Rifa, Noam Shani, Céline Delbes, Hélène Berthoud, Christophe Chassard. (2019) BMC Genomics 20(1):560. https://doi.org/10.1186/s12864-019-5914-8
 
