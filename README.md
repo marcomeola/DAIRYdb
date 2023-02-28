@@ -18,7 +18,7 @@ DAIRYdb is able to assign sequences to the species rank whereas classical Databa
 
 ## Installation
 ### Download DAIRYdb
-DAIRYdb_v1.2.4 is available here as newick tree file and adapted to different classification tools: Metax2.2, Blast+ and SINTAX, Qiime2, FROGS. For request to adapt DAIRYdb to other classifier please do not hesitate drop me a line at marco.meola@agroscope.admin.ch.
+DAIRYdb_v1.2.4 is available here as newick tree file and adapted to different classification tools: Metax2.2, Blast+ and SINTAX, Qiime2, FROGS. For request to adapt DAIRYdb to other classifier please do not hesitate drop me a line at mmeola@imm.uzh.ch.
 
 #### Sintax (Usearch32bit)
 DAIRYdb_v1.2.4_20200604_STX.udb was generated using usearch v10.0. If the available .udb file is not working properly on your system it is recommended to recreate the .udb datbase with your usearch version and OS using following code:
