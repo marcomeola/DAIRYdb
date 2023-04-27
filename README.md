@@ -4,6 +4,11 @@
 # DAIRYdb: a manually curated reference database for improved taxonomy annotation of 16S rRNA gene sequences from dairy products
 Marco Meola, Etienne Rifa, Noam Shani, Céline Delbes, Hélène Berthoud, Christophe Chassard. (2019) BMC Genomics 20(1):560. https://doi.org/10.1186/s12864-019-5914-8
 
+
+## Update (april 2023): DAIRYdb v3.0.0
+
+The new version v3.0.0 of DAIRYdb is [available here](https://nextcloud.inrae.fr/s/5ne3ooAsM7zQtcW). All changes are informed in the file `changes_v3.0.0.html`, main changes are listed in [#7](https://github.com/marcomeola/DAIRYdb/issues/7).
+
 ## Update (april 2022): DAIRYdb v2.1
 
 The new version v2.1 of DAIRYdb is [available here](https://nextcloud.inrae.fr/s/5ne3ooAsM7zQtcW). See issue [#6](https://github.com/marcomeola/DAIRYdb/issues/6) for details.
